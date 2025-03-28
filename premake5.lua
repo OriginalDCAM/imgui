@@ -3,7 +3,7 @@ project "ImGui"
   language "C++"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-    objectdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     files {
       "imconfig.h",
@@ -24,5 +24,5 @@ project "ImGui"
     cppdialect "C++20"
     staticruntime "On"
 
-    filter { "system:windows", "configuration:Release" }
+    filter { "system:windows", "configurations:Release" }
       buildoptions "/MT"
